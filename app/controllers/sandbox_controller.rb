@@ -24,8 +24,12 @@ class SandboxController < ApplicationController
 				end
 			end
 			data.sort_by{|_key, value| value}
-			key, value = data.first
-			puts "#{user.name} can highly be #{key} as he used it in #{value} repos"
+			unless data.first.nil?
+				key, value = data.first
+				puts "#{user.name} can highly be #{key} as he used it in #{value} repos"
+			else
+				puts "#{user.name} has no repos"
+			end
 		rescue => error
 			puts "Failed, username is incorrect"
 		end
