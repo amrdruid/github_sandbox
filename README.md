@@ -16,7 +16,7 @@
 
 ## 1 - To know the best most used language in all repos: 
 
-`SandboxController.new.favorite_language("amrdruid")`
+`SandboxController.new.favorite_language("username")`
 
 
 ---
