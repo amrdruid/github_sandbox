@@ -11,7 +11,7 @@ class SandboxController < ApplicationController
     end
   end
 
-	def repos_languages(username)
+	def favorite_language(username)
 		user = Octokit.user username
 		data = {}
 		begin
