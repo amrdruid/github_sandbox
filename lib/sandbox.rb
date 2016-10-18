@@ -20,7 +20,16 @@ module Sandbox
 				return "#{user.name} has no repos"
 			end
 		rescue => error
-			puts "Failed, username is incorrect"
+			return "Failed, username is incorrect"
 		end
 	end
+
+  def user_company(username)
+    user = Octokit.user username
+    begin
+      return user[:company]
+    rescue => error
+      return "Failed, unexpected error"
+    end
+  end
 end
