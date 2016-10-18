@@ -23,8 +23,9 @@ class SandboxController < ApplicationController
 					data[repo.language] += 1
 				end
 			end
-			data.sort_by{|_key, value| value}
-			unless data.first.nil?
+
+    data = data.sort_by {|k,v| v}.reverse
+    unless data.first.nil?
 				key, value = data.first
 				puts "#{user.name} can highly be #{key} as he used it in #{value} repos"
 			else

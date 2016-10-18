@@ -1,22 +1,24 @@
 # Welcome to Github Sandbox !
 
-### Here you can check whatever you want to know about Github users 
+### Here you can check whatever you want to know about Github users
 
---- 
+---
 
 ## To start:
 
-. Clone the Project 
+. Clone the Project
 
-. rails c 
+. rails c
 
 
 ---
 
 
-## 1 - To know the best most used language in all repos: 
+## 1 - To know the best most used language in all repos:
 
-`SandboxController.new.favorite_language("username")`
+`include Sandbox`
+
+`favorite_language("username")`
 
 
 ---
@@ -26,6 +28,5 @@
 - Deployed version on Heroku
 - Login
 - Views
-- Know the most contributors in a repo 
+- Know the most contributors in a repo
 - Get more data about any user
-
